@@ -1,12 +1,12 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require("../database/index");
+const { sequelize } = require("../database");
 
 const Todo = sequelize.define("todos", {
   id: {
-    autoIncrement,
-    primaryKey,
-    allowNull: false,
     type: DataTypes.INTEGER,
+    allowNull: false,
+    autoIncrement: true,
+    primaryKey: true,
   },
   title: {
     type: DataTypes.STRING,

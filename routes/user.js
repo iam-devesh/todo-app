@@ -1,12 +1,15 @@
 const express = require("express");
-const { singup } = require("../controller/user");
+const { singup, singin, signout } = require("../controller/user");
 const router = express.Router();
 
 // signup
 // email password
 // password - hash
 
-router.get("/singup", singup);
-//signin
+router.post("/singup", singup);
 
-// singout
+router.post('/singin', singin);
+
+router.get('/signout', signout);
+
+module.exports = router;

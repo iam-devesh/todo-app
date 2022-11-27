@@ -1,13 +1,12 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../database/index");
-const todo = require("./todo");
+const DataTypes = require("sequelize");
+const { sequelize } = require("../database");
 
+const todo = require("./todo");
 const User = sequelize.define("User", {
   id: {
-    autoIncrement,
-    primaryKey,
-    allowNull: false,
     type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
   },
   firstname: {
     type: DataTypes.STRING,

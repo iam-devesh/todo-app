@@ -11,7 +11,7 @@ exports.sequelize = new Sequelize(
   DATABASE_PASSWORD,
   {
     host: "localhost",
-    port: 5432,
+    port: 5435,
     dialect: "postgres",
   }
 );
